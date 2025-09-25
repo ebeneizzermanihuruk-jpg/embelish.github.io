@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Celebration</title>
+    <link rel="stylesheet" href="./birthday-styles.css">
+</head>
+<body>
+    <header class="header">
+        <h1 class="main-title">Happy Birthday!</h1>
+        <p class="subtitle">A moment of reflection and passion</p>
+    </header>
+
+    <main class="main-content">
+        <section class="video-section">
+            <h2>Special Message, THANK YOU</h2>
+            <div class="video-container">
+                <iframe width="800" height="450" src="https://www.youtube.com/embed/rWIaZKZe3Z4" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <section class="wishes-section">
+            <div class="wish-card">
+                <h3>Warm Wishes</h3>
+                <p>May this year bring you the depth and intensity you deserve, wrapped in calm serenity.</p>
+            </div>
+            <div class="wish-card">
+                <h3>Reflections</h3>
+                <p>Embrace the seriousness of the journey ahead, with the fire of passion guiding your path.</p>
+            </div>
+        </section>
+
+        <section class="decorative-section">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Celebrating with intensity and grace. &copy; 2023</p>
+        <span>ask TK</span> <input type="text" id="codeInput" placeholder="what is.. tk nickname from flake" onkeydown="if(event.key === 'Enter'){checkCode();}" />
+        <a href="birthday-page2.html" id="page2Link" style="pointer-events:none; color:gray;">for the called snowflake</a>
+    </footer>
+
+    <script src="./birthday-script.js"></script>
+
+    <script>
+        function checkCode() {
+            const codeInput = document.getElementById('codeInput');
+            const page2Link = document.getElementById('page2Link');
+            const correctCode = 'sun';
+            if (codeInput.value === correctCode) {
+                page2Link.style.pointerEvents = 'auto';
+                page2Link.style.color = 'blue';
+            } else {
+                page2Link.style.pointerEvents = 'none';
+                page2Link.style.color = 'gray';
+            }
+        }
+    </script>
+</body>
+</html>
